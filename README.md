@@ -5,5 +5,5 @@ Docker image for the [languagetool http server](http://wiki.languagetool.org/htt
 ## How to use 
 
 ```
-docker run -p 8010:8010 gentics/languagetool
+docker run -p 9081:9081 dinantia/languagetool
 ```

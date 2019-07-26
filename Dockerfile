@@ -12,7 +12,7 @@ RUN set -ex \
         libhunspell-1.4-0 \
         hunspell-de-at
 
-ENV VERSION 3.7
+ENV VERSION 4.1
 ADD https://www.languagetool.org/download/LanguageTool-$VERSION.zip /LanguageTool-$VERSION.zip
 
 RUN unzip LanguageTool-$VERSION.zip \
@@ -20,6 +20,6 @@ RUN unzip LanguageTool-$VERSION.zip \
 
 WORKDIR /LanguageTool-$VERSION
 
-CMD ["java", "-cp", "languagetool-server.jar", "org.languagetool.server.HTTPServer", "--port", "8010", "--public" ]
-EXPOSE 8010
+CMD ["java", "-cp", "languagetool-server.jar", "org.languagetool.server.HTTPServer", "--port", "9081", "--public" ]
+EXPOSE 9081
 
